@@ -27,7 +27,7 @@
 
 -Multiple route handlers - play with the code
 -next()
--next function mand error along with res.send()
+-next function and error along with res.send()
 -app.use("/route" , rH , [rH2 ,rH3], rH4 , rH5)
 -what is a middleware ? why do we need it?
 -How express JS basically handles requests behind the scenes

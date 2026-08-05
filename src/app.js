@@ -2,26 +2,10 @@ const express = require('express');
 
 const app = express();
 
-app.use("/user", (req, res) =>{
-    res.send("HAHAHAHA");
-})
+app.get("/user/:userID/:name?passwprd", (req, res) =>{
+    console.log(req.params);
+    res.send({firstName: "Prachi", lastname: "Mehra"});
 
-//this wil only handle GET call to /user
-app.get("/user",(req , res)  => {
-    res.send({firstname:"Prachi", lastname: "Mehra"  });
-});
-
-app.post("/user",(req , res)  => {
-    //saving data to DB
-    res.send({firstname:"Prachi", lastname: "Mehra"  });
-});
-
-app.delete ("/user", (req , res) =>{
-    res.send("Deleted succesfully");
-});
-
-app.use("/test",(req , res) =>{
-    res.send("hello from the server");
 });
 
 app.listen(7777, () =>  {
